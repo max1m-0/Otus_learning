@@ -1,0 +1,8 @@
+/vendor/*
+composer.json
+composer.lock
+/.idea
+/upload/
+otus_ssh
+otus_ssh.pub
+/bitrix/
