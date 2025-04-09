@@ -1,16 +1,14 @@
 <?php
 use Bitrix\Main\EventManager;
 use Otus\UserTypes;
-use Otus\Crm\Deal;
-use Otus\Iblock;
 $eventManager = EventManager::getInstance();
 
 $eventManager->AddEventHandler(
-    'iblock',
+'iblock',
     'onIBlockPropertyBuildList',
     [
         UserTypes\ListIblock::class,
         'GetUserTypeDescription'
     ]);
-$eventManager->addEventHandler('crm', 'OnAfterCrmDealUpdate', [Deal\AfterUpdate::class, 'OnAfterCrmDealUpdateHandler']);
-EventManager::getInstance()->addEventHandler("iblock","OnAfterIBlockElementUpdate",[Iblock\AfterUpdate::class, "onAfterIBlockElementUpdateHandler"]);
+\Bitrix\Main\UI\Extension::load(['popup']);
+\Bitrix\Main\Page\Asset::getInstance()->addJs('/local/js/timeman/custom/main.js');
