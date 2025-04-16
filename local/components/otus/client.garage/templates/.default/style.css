@@ -1,0 +1,72 @@
+.garage-table {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: flex-start;
+    padding: 20px 0;
+}
+
+.garage-car {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.garage-car:hover {
+    transform: translateY(-4px);
+}
+
+.garage-car h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.garage-car ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.garage-car li {
+    margin-bottom: 6px;
+    color: #555;
+    font-size: 14px;
+}
+
+.garage-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 14px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.garage-button:hover {
+    background-color: #005ec2;
+}
+
+.garage-photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.garage-photo {
+    width: 100%;
+    max-width: 100px;
+    height: 70px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    object-fit: cover;
+}

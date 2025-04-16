@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Установка</title>
+    <script src="//api.bitrix24.com/api/v1/"></script>
+</head>
+<body>
+<div id="status">Установка...</div>
+<script>
+    const divStatus = document.getElementById("status");
+
+    BX24.init(async function () {
+        try {
+            await new Promise((resolve, reject) => {
+                BX24.callMethod("crm.contact.userfield.add", {
+                    fields: {
+                        FIELD_NAME: "UF_LAST_COMM",
+                        USER_TYPE_ID: "datetime",
+                        XML_ID: "UF_LAST_COMM",
+                        EDIT_FORM_LABEL: {"ru": "Дата последней коммуникации"},
+                        LIST_COLUMN_LABEL: {"ru": "Последняя коммуникация"},
+                        SHOW_IN_LIST: "Y",
+                        IS_FILTERED: "Y"
+                    }
+                }, function (result) {
+                    if (result.error()) {
+                        divStatus.innerHTML += "<br>Ошибка создания поля: " + result.error();
+                        reject();
+                    } else {
+                        divStatus.innerHTML += "<br>Поле создано";
+                        resolve();
+                    }
+                });
+            });
+
+            // Регистрируем обработчик события OnImMessageAdd
+            await new Promise((resolve, reject) => {
+                BX24.callMethod("event.bind", {
+                    event: "OnImMessageAdd",
+                    handler: "https://cg96022.tw1.ru/app/communication-app/event.php"
+                }, function (res) {
+                    if (res.error()) {
+                        divStatus.innerHTML += "<br>Ошибка bind OnImMessageAdd: " + res.error();
+                        reject();
+                    } else {
+                        divStatus.innerHTML += "<br>OnImMessageAdd зарегистрирован";
+                        resolve();
+                    }
+                });
+            });
+
+            // Регистрируем обработчик события OnCallEnd
+            await new Promise((resolve, reject) => {
+                BX24.callMethod("event.bind", {
+                    event: "OnCallEnd",
+                    handler: "https://cg96022.tw1.ru/app/communication-app/event.php"
+                }, function (res) {
+                    if (res.error()) {
+                        divStatus.innerHTML += "<br>Ошибка bind OnCallEnd: " + res.error();
+                        reject();
+                    } else {
+                        divStatus.innerHTML += "<br>OnCallEnd зарегистрирован";
+                        resolve();
+                    }
+                });
+            });
+
+            divStatus.innerHTML += "<br>Установка завершена";
+        } catch (e) {
+            divStatus.innerHTML += "<br>Ошибка установки";
+        }
+    });
+</script>
+</body>
+</html>
