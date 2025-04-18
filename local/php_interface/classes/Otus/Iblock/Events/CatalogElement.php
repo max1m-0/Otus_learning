@@ -21,8 +21,8 @@ abstract class CatalogElement
     public const CATALOG_CARS_SECTION_ID = 17;
 
     /**
-     * @param $arFields
-     * @return void
+     * @param array $arFields
+     * @return void - void при успехе
      */
-    abstract public static function execute(&$arFields) :void;
+    abstract public static function execute(array &$arFields) :void;
 }

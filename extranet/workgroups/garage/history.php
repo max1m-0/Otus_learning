@@ -1,14 +1,25 @@
 <?php
+define("PUBLIC_AJAX_MODE", true);
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.php");
 
 use Bitrix\Main\Loader;
-
-require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-
+if ($_GET['IFRAME'] !== 'Y') {
+    LocalRedirect('/extranet/workgroups/garage/');
+    exit;
+}
 Loader::includeModule("iblock");
-global $USER;
+CJSCore::Init(['sidepanel']);
 
-$APPLICATION->SetTitle(GetMessage("ABOUT_TITLE"));
+$carId = (int)$_GET['car_id'];
 
+$APPLICATION->ShowHead();
+$APPLICATION->SetTitle("История автомобиля");
 
-require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
+?>
+
+<?php
+$APPLICATION->IncludeComponent("otus:car.history", "", [
+    "CAR_ID" => $carId,
+]);
+?>
+

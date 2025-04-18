@@ -7,7 +7,7 @@ global $USER;
 
 if (!$USER || !$USER->IsAuthorized())
 {
-    $this->arResult["ERROR"] = "Пользователь не авторизован.";
+    $this->arResult["ERROR"] = GetMessage("USER_UNAUTHORISED");
     $this->includeComponentTemplate();
 
     return;
@@ -15,19 +15,19 @@ if (!$USER || !$USER->IsAuthorized())
 
 if (!Loader::includeModule("iblock"))
 {
-    $this->arResult["ERROR"] = "Модуль инфоблоков не подключен.";
+    $this->arResult["ERROR"] = GetMessage("IBLOCK_NOT_INCLUDED");
     $this->includeComponentTemplate();
 
     return;
 }
 
 $clientId = $USER->GetID();
-
+const CAR_CATALOG_ID = 14;
 $cars = [];
 $res = \CIBlockElement::GetList(
     ["NAME" => "ASC"],
     [
-        "IBLOCK_ID" => 14,
+        "IBLOCK_ID" => CAR_CATALOG_ID,
         "ACTIVE" => "Y",
         "PROPERTY_CAR_OWNER" => $clientId,
     ],

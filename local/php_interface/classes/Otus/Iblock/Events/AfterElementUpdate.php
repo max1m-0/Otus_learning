@@ -3,17 +3,18 @@
 namespace Otus\Iblock\Events;
 
 use Bitrix\Main\Loader;
+use Bitrix\Main\LoaderException;
 use CIBlockSection;
 
 class AfterElementUpdate extends CatalogElement
 {
     /**
-     * @param $arFields
-     * @return void
-     * @throws \Bitrix\Main\LoaderException
+     * @param array $arFields - массив полей элемента
+     * @return void - void при успехе
+     * @throws LoaderException
      * Функция обновляет подраздел в каталоге в разделе АВТОМОБИЛИ
      */
-    public static function execute(&$arFields): void
+    public static function execute(array &$arFields): void
     {
         if ((int)$arFields["IBLOCK_ID"] !== self::BRAND_IBLOCK_ID)
         {
@@ -24,10 +25,11 @@ class AfterElementUpdate extends CatalogElement
         $elementId = $arFields["ID"];
         $newName = $arFields["NAME"];
         $active = $arFields["ACTIVE"];
+        $code = "linked_" . $elementId;
 
         $res = CIBlockSection::GetList([], [
             "IBLOCK_ID" => self::CATALOG_IBLOCK_ID,
-            "CODE" => "linked_" . $elementId
+            "CODE" => $code
         ]);
 
         if ($section = $res->Fetch()) {

@@ -10,8 +10,8 @@ use CIBlockSection;
 class AfterElementDelete extends CatalogElement
 {
     /**
-     * @param $arFields
-     * @return void
+     * @param array $arFields - массив полей элемента
+     * @return void - void при успехе
      * Функция удаляет подраздел в каталоге в разделе АВТОМОБИЛИ
      * @throws LoaderException
      */
@@ -23,11 +23,11 @@ class AfterElementDelete extends CatalogElement
         }
         Loader::includeModule("iblock");
         $elementId = $arFields["ID"];
-
+        $code = "linked_" . $elementId;
         $resSec = CIBlockSection::GetList(
             [], [
             "IBLOCK_ID" => self::CATALOG_IBLOCK_ID,
-            "CODE" => "linked_" . $elementId,
+            "CODE" => $code,
         ],
         );
         if ($section = $resSec->Fetch())
