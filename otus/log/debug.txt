@@ -18,101 +18,7 @@ OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/h
 OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog_after.php(88): include_once
 OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog.php(11): require
 OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/bitrix/header.php(1): require_once
-OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/otus/healers/index.php(2): require
-OTUS - Exception: strtolower(): Passing null to parameter #1 ($string) of type string is deprecated
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/landing/lib/restriction/manager.php Line: 118
-OTUS - Trace: 
-OTUS -  #0 (): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/landing/lib/restriction/manager.php(118): strtolower
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/landing/lib/restriction/manager.php(232): Bitrix\Landing\Restriction\Manager::getMapItem
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/landing/lib/manager.php(882): Bitrix\Landing\Restriction\Manager::isAllowed
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/landing/lib/rights.php(201): Bitrix\Landing\Manager::checkFeature
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/landing/lib/rights.php(1057): Bitrix\Landing\Rights::isFeatureOn
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/binding/menu.php(758): Bitrix\Landing\Rights::hasAdditionalRight
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.user.profile.button/class.php(145): Bitrix\Intranet\Binding\Menu::getMenuItems
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.user.profile.button/class.php(96): IntranetUserProfileButton->getBindingData
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.user.profile.button/class.php(51): IntranetUserProfileButton->prepareResult
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(668): IntranetUserProfileButton->executeComponent
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(1188): CBitrixComponent->includeComponent
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/header.php(338): CAllMain->IncludeComponent
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog_after.php(88): include_once
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog.php(11): require
-OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/header.php(1): require_once
-OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/otus/healers/index.php(2): require
-OTUS - Exception: preg_replace_callback(): Passing null to parameter #3 ($subject) of type array|string is deprecated
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/text/emoji.php Line: 26
-OTUS - Trace: 
-OTUS -  #0 (): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/text/emoji.php(26): preg_replace_callback
-OTUS -  #2 (): Bitrix\Main\Text\Emoji::decode
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/orm/query/query.php(3663): call_user_func_array
-OTUS -  #4 (): Bitrix\Main\ORM\Query\Query->fetchDataModificationCallback
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/db/result.php(206): call_user_func_array
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/db/result.php(240): Bitrix\Main\DB\Result->fetch
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/orm/query/result.php(632): Bitrix\Main\DB\Result->fetchAll
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/recent.php(363): Bitrix\Main\ORM\Query\Result->fetchAll
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Application/Config.php(47): Bitrix\Im\Recent::getList
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Application/Config.php(29): Bitrix\Im\V2\Application\Config->getPreloadedList
-OTUS -  #11 (): Bitrix\Im\V2\Application\Config->jsonSerialize
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/web/json.php(30): json_encode
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Application.php(23): Bitrix\Main\Web\Json::encode
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/classes/general/im_messenger.php(3778): Bitrix\Im\V2\Application->getTemplate
-OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/components/bitrix/im.messenger/.default/template.php(178): CIMMessenger::GetV2TemplateJS
-OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component_template.php(790): include
-OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component_template.php(885): CBitrixComponentTemplate->__IncludePHPTemplate
-OTUS -  #18 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(784): CBitrixComponentTemplate->IncludeTemplate
-OTUS -  #19 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(724): CBitrixComponent->showComponentTemplate
-OTUS -  #20 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/im.messenger/component.php(38): CBitrixComponent->includeComponentTemplate
-OTUS -  #21 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(615): include
-OTUS -  #22 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(692): CBitrixComponent->__includeComponent
-OTUS -  #23 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(1188): CBitrixComponent->includeComponent
-OTUS -  #24 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/header.php(401): CAllMain->IncludeComponent
-OTUS -  #25 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog_after.php(88): include_once
-OTUS -  #26 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog.php(11): require
-OTUS -  #27 /home/c/cg96022/Manage_Sites/public_html/bitrix/header.php(1): require_once
-OTUS -  #28 /home/c/cg96022/Manage_Sites/public_html/otus/healers/index.php(2): require
-OTUS - Exception: Class "HealersTable" not found
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/otus/healers/index.php Line: 4
-OTUS - Trace: 
-OTUS - Exception: base64_encode(): Passing null to parameter #1 ($string) of type string is deprecated
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/seo/include.php Line: 82
-OTUS - Trace: 
-OTUS -  #0 (): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/seo/include.php(82): base64_encode
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/tools.php(5253): CSeoEventHandlers::SeoOnPanelCreate
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/public/top_panel.php(982): ExecuteModuleEventEx
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/public/top_panel.php(1083): CTopPanel::InitPanelIcons
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/public/top_panel.php(1099): CTopPanel::shouldShowPanel
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/tools.php(5246): CTopPanel::InitPanel
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(3363): ExecuteModuleEventEx
-OTUS -  #8 (): CAllMain->EndBufferContent
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(3648): ob_end_flush
-OTUS -  #10 (): CAllMain::{closure}
-OTUS - Exception: Return type of Bitrix\Im\V2\Link\BaseLinkItem::offsetGet($offset) should either be compatible with ArrayAccess::offsetGet(mixed $offset): mixed, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Common/FieldAccessImplementation.php Line: 16
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Link/BaseLinkItem.php(17): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/loader.php(442): require_once
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Link/Reminder/ReminderItem.php(19): Bitrix\Main\Loader::autoLoad
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/loader.php(442): require_once
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Collection.php(37): Bitrix\Main\Loader::autoLoad
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Collection.php(216): Bitrix\Im\V2\Collection::getDataClass
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Collection.php(129): Bitrix\Im\V2\Collection->getDataEntityCollection
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Collection.php(227): Bitrix\Im\V2\Collection->prepareFields
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Link/Reminder/ReminderService.php(143): Bitrix\Im\V2\Collection->save
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Link/Reminder/ReminderService.php(26): Bitrix\Im\V2\Link\Reminder\ReminderService->remind
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/agent.php(508) : eval()'d code(1): Bitrix\Im\V2\Link\Reminder\ReminderService::remindAgent
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/agent.php(508): eval
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/agent.php(357): CAllAgent::ExecuteAgents
-OTUS -  #13 (): CAllAgent::CheckAgents
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/application.php(818): call_user_func_array
-OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/application.php(377): Bitrix\Main\Application->runBackgroundJobs
-OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/application.php(329): Bitrix\Main\Application->terminate
-OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/httpapplication.php(171): Bitrix\Main\Application->end
-OTUS -  #18 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/httpapplication.php(149): Bitrix\Main\HttpApplication->finalizeControllerResult
-OTUS -  #19 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/httpapplication.php(107): Bitrix\Main\HttpApplication->runController
-OTUS -  #20 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/services/ajax.php(29): Bitrix\Main\HttpApplication->run
-OTUS -  #21 /home/c/cg96022/Manage_Sites/public_html/bitrix/services/main/ajax.php(1): require
+OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/otus/debug.php(2): require
 OTUS - Exception: Trying to access array offset on value of type null
 OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
 OTUS - Trace: 
@@ -133,98 +39,28 @@ OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/h
 OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog_after.php(88): include_once
 OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog.php(11): require
 OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/bitrix/header.php(1): require_once
-OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/otus/healers/index.php(2): require
-OTUS - Exception: strtolower(): Passing null to parameter #1 ($string) of type string is deprecated
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/landing/lib/restriction/manager.php Line: 118
+OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/otus/debug.php(2): require
+OTUS - Exception: Trying to access array offset on value of type null
+OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
 OTUS - Trace: 
-OTUS -  #0 (): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/landing/lib/restriction/manager.php(118): strtolower
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/landing/lib/restriction/manager.php(232): Bitrix\Landing\Restriction\Manager::getMapItem
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/landing/lib/manager.php(882): Bitrix\Landing\Restriction\Manager::isAllowed
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/landing/lib/rights.php(201): Bitrix\Landing\Manager::checkFeature
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/landing/lib/rights.php(1057): Bitrix\Landing\Rights::isFeatureOn
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/binding/menu.php(758): Bitrix\Landing\Rights::hasAdditionalRight
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.user.profile.button/class.php(145): Bitrix\Intranet\Binding\Menu::getMenuItems
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.user.profile.button/class.php(96): IntranetUserProfileButton->getBindingData
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.user.profile.button/class.php(51): IntranetUserProfileButton->prepareResult
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(668): IntranetUserProfileButton->executeComponent
+OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
+OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
+OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
+OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
+OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
+OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
+OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
+OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
+OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.settings.widget/class.php(51): Bitrix\Intranet\CurrentUser::get
+OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.settings.widget/class.php(238): IntranetSettingsWidgetComponent->getUser
+OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(668): IntranetSettingsWidgetComponent->executeComponent
 OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(1188): CBitrixComponent->includeComponent
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/header.php(338): CAllMain->IncludeComponent
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog_after.php(88): include_once
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog.php(11): require
-OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/header.php(1): require_once
-OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/otus/healers/index.php(2): require
-OTUS - Exception: preg_replace_callback(): Passing null to parameter #3 ($subject) of type array|string is deprecated
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/text/emoji.php Line: 26
-OTUS - Trace: 
-OTUS -  #0 (): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/text/emoji.php(26): preg_replace_callback
-OTUS -  #2 (): Bitrix\Main\Text\Emoji::decode
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/orm/query/query.php(3663): call_user_func_array
-OTUS -  #4 (): Bitrix\Main\ORM\Query\Query->fetchDataModificationCallback
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/db/result.php(206): call_user_func_array
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/db/result.php(240): Bitrix\Main\DB\Result->fetch
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/orm/query/result.php(632): Bitrix\Main\DB\Result->fetchAll
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/recent.php(363): Bitrix\Main\ORM\Query\Result->fetchAll
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Application/Config.php(47): Bitrix\Im\Recent::getList
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Application/Config.php(29): Bitrix\Im\V2\Application\Config->getPreloadedList
-OTUS -  #11 (): Bitrix\Im\V2\Application\Config->jsonSerialize
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/web/json.php(30): json_encode
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Application.php(23): Bitrix\Main\Web\Json::encode
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/classes/general/im_messenger.php(3778): Bitrix\Im\V2\Application->getTemplate
-OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/components/bitrix/im.messenger/.default/template.php(178): CIMMessenger::GetV2TemplateJS
-OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component_template.php(790): include
-OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component_template.php(885): CBitrixComponentTemplate->__IncludePHPTemplate
-OTUS -  #18 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(784): CBitrixComponentTemplate->IncludeTemplate
-OTUS -  #19 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(724): CBitrixComponent->showComponentTemplate
-OTUS -  #20 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/im.messenger/component.php(38): CBitrixComponent->includeComponentTemplate
-OTUS -  #21 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(615): include
-OTUS -  #22 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(692): CBitrixComponent->__includeComponent
-OTUS -  #23 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(1188): CBitrixComponent->includeComponent
-OTUS -  #24 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/header.php(401): CAllMain->IncludeComponent
-OTUS -  #25 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog_after.php(88): include_once
-OTUS -  #26 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog.php(11): require
-OTUS -  #27 /home/c/cg96022/Manage_Sites/public_html/bitrix/header.php(1): require_once
-OTUS -  #28 /home/c/cg96022/Manage_Sites/public_html/otus/healers/index.php(2): require
-OTUS - Exception: Class "HealersTable" not found
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/otus/healers/index.php Line: 4
-OTUS - Trace: 
-OTUS - Exception: base64_encode(): Passing null to parameter #1 ($string) of type string is deprecated
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/seo/include.php Line: 82
-OTUS - Trace: 
-OTUS -  #0 (): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/seo/include.php(82): base64_encode
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/tools.php(5253): CSeoEventHandlers::SeoOnPanelCreate
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/public/top_panel.php(982): ExecuteModuleEventEx
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/public/top_panel.php(1083): CTopPanel::InitPanelIcons
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/public/top_panel.php(1099): CTopPanel::shouldShowPanel
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/tools.php(5246): CTopPanel::InitPanel
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(3363): ExecuteModuleEventEx
-OTUS -  #8 (): CAllMain->EndBufferContent
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(3648): ob_end_flush
-OTUS -  #10 (): CAllMain::{closure}
-OTUS - Exception: Return type of Bitrix\Im\V2\Link\BaseLinkItem::offsetGet($offset) should either be compatible with ArrayAccess::offsetGet(mixed $offset): mixed, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Common/FieldAccessImplementation.php Line: 16
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Link/BaseLinkItem.php(17): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/loader.php(442): require_once
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Link/Reminder/ReminderItem.php(19): Bitrix\Main\Loader::autoLoad
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/loader.php(442): require_once
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Collection.php(37): Bitrix\Main\Loader::autoLoad
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Collection.php(216): Bitrix\Im\V2\Collection::getDataClass
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Collection.php(129): Bitrix\Im\V2\Collection->getDataEntityCollection
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Collection.php(227): Bitrix\Im\V2\Collection->prepareFields
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Link/Reminder/ReminderService.php(143): Bitrix\Im\V2\Collection->save
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/im/lib/V2/Link/Reminder/ReminderService.php(26): Bitrix\Im\V2\Link\Reminder\ReminderService->remind
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/agent.php(508) : eval()'d code(1): Bitrix\Im\V2\Link\Reminder\ReminderService::remindAgent
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/agent.php(508): eval
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/agent.php(357): CAllAgent::ExecuteAgents
-OTUS -  #13 (): CAllAgent::CheckAgents
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/application.php(818): call_user_func_array
-OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/application.php(377): Bitrix\Main\Application->runBackgroundJobs
-OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/application.php(329): Bitrix\Main\Application->terminate
-OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/public/session.php(35): Bitrix\Main\Application->end
-OTUS -  #18 /home/c/cg96022/Manage_Sites/public_html/bitrix/tools/public_session.php(1): require
+OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/logo.php(46): CAllMain->IncludeComponent
+OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/header.php(276): include
+OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog_after.php(88): include_once
+OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog.php(11): require
+OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/bitrix/header.php(1): require_once
+OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/otus/debug.php(2): require
 OTUS - Exception: Trying to access array offset on value of type null
 OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
 OTUS - Trace: 
@@ -236,13 +72,16 @@ OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/
 OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
 OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
 OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
+OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.settings.widget/class.php(51): Bitrix\Intranet\CurrentUser::get
+OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.settings.widget/class.php(238): IntranetSettingsWidgetComponent->getUser
+OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(668): IntranetSettingsWidgetComponent->executeComponent
+OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(1188): CBitrixComponent->includeComponent
+OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/logo.php(46): CAllMain->IncludeComponent
+OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/header.php(276): include
+OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog_after.php(88): include_once
+OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog.php(11): require
+OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/bitrix/header.php(1): require_once
+OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/otus/debug.php(2): require
 OTUS - Exception: Trying to access array offset on value of type null
 OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
 OTUS - Trace: 
@@ -254,13 +93,16 @@ OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/
 OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
 OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
 OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
+OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.settings.widget/class.php(51): Bitrix\Intranet\CurrentUser::get
+OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.settings.widget/class.php(238): IntranetSettingsWidgetComponent->getUser
+OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(668): IntranetSettingsWidgetComponent->executeComponent
+OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(1188): CBitrixComponent->includeComponent
+OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/logo.php(46): CAllMain->IncludeComponent
+OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/header.php(276): include
+OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog_after.php(88): include_once
+OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog.php(11): require
+OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/bitrix/header.php(1): require_once
+OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/otus/debug.php(2): require
 OTUS - Exception: Trying to access array offset on value of type null
 OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
 OTUS - Trace: 
@@ -272,13 +114,16 @@ OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/
 OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
 OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
 OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
+OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.settings.widget/class.php(51): Bitrix\Intranet\CurrentUser::get
+OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.settings.widget/class.php(238): IntranetSettingsWidgetComponent->getUser
+OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(668): IntranetSettingsWidgetComponent->executeComponent
+OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(1188): CBitrixComponent->includeComponent
+OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/logo.php(46): CAllMain->IncludeComponent
+OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/header.php(276): include
+OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog_after.php(88): include_once
+OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog.php(11): require
+OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/bitrix/header.php(1): require_once
+OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/otus/debug.php(2): require
 OTUS - Exception: Trying to access array offset on value of type null
 OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
 OTUS - Trace: 
@@ -290,13 +135,16 @@ OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/
 OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
 OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
 OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
+OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.settings.widget/class.php(51): Bitrix\Intranet\CurrentUser::get
+OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.settings.widget/class.php(238): IntranetSettingsWidgetComponent->getUser
+OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(668): IntranetSettingsWidgetComponent->executeComponent
+OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(1188): CBitrixComponent->includeComponent
+OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/logo.php(46): CAllMain->IncludeComponent
+OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/header.php(276): include
+OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog_after.php(88): include_once
+OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog.php(11): require
+OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/bitrix/header.php(1): require_once
+OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/otus/debug.php(2): require
 OTUS - Exception: Trying to access array offset on value of type null
 OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
 OTUS - Trace: 
@@ -308,262 +156,13 @@ OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/
 OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
 OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
 OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: Trying to access array offset on value of type null
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php Line: 63
-OTUS - Trace: 
-OTUS -  #0 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(63): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(2643): CUserTypeManager->GetUserType
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypemanager.php(197): CUserTypeManager->getEntities
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/usertypesql.php(20): CUserTypeManager->GetUserFields
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(427): CUserTypeSQL->SetEntity
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/user.php(3744): CAllUser::GetList
-OTUS -  #6 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(49): CAllUser::GetByID
-OTUS -  #7 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/CurrentUser.php(39): Bitrix\Intranet\CurrentUser::create
-OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Site/FirstPage/FirstPageProvider.php(32): Bitrix\Intranet\CurrentUser::get
-OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(76): Bitrix\Intranet\Site\FirstPage\FirstPageProvider->getAvailablePage
-OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(68): Bitrix\Intranet\Portal\FirstPage->getDefaultUri
-OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(30): Bitrix\Intranet\Portal\FirstPage->getUriFromCache
-OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/lib/Portal/FirstPage.php(37): Bitrix\Intranet\Portal\FirstPage->getUri
-OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/intranet/classes/general/utils.php(2139): Bitrix\Intranet\Portal\FirstPage->getLink
-OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/index.php(12): CIntranetUtils::getB24FirstPageLink
-OTUS - Exception: mb_strtoupper(): Passing null to parameter #1 ($string) of type string is deprecated
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/ui/filter/options.php Line: 578
-OTUS - Trace: 
-OTUS -  #0 (): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/ui/filter/options.php(578): mb_strtoupper
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/ui/filter/options.php(774): Bitrix\Main\UI\Filter\Options->trySetFilterFromRequest
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/interface/admin_ui_list.php(355): Bitrix\Main\UI\Filter\Options->getFilter
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/iblock/admin/iblock_list_admin.php(630): CAdminUiList->AddFilter
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/admin/iblock_list_admin.php(1): require
-OTUS - Exception: mb_strtoupper(): Passing null to parameter #1 ($string) of type string is deprecated
-OTUS - File: /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/ui/filter/options.php Line: 578
-OTUS - Trace: 
-OTUS -  #0 (): Bitrix\Main\Diag\ExceptionHandler->handleError
-OTUS -  #1 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/ui/filter/options.php(578): mb_strtoupper
-OTUS -  #2 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/lib/ui/filter/options.php(774): Bitrix\Main\UI\Filter\Options->trySetFilterFromRequest
-OTUS -  #3 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/interface/admin_ui_list.php(355): Bitrix\Main\UI\Filter\Options->getFilter
-OTUS -  #4 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/iblock/admin/iblock_list_admin.php(630): CAdminUiList->AddFilter
-OTUS -  #5 /home/c/cg96022/Manage_Sites/public_html/bitrix/admin/iblock_list_admin.php(1): require
+OTUS -  #8 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.settings.widget/class.php(51): Bitrix\Intranet\CurrentUser::get
+OTUS -  #9 /home/c/cg96022/Manage_Sites/public_html/bitrix/components/bitrix/intranet.settings.widget/class.php(238): IntranetSettingsWidgetComponent->getUser
+OTUS -  #10 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/component.php(668): IntranetSettingsWidgetComponent->executeComponent
+OTUS -  #11 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/classes/general/main.php(1188): CBitrixComponent->includeComponent
+OTUS -  #12 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/logo.php(46): CAllMain->IncludeComponent
+OTUS -  #13 /home/c/cg96022/Manage_Sites/public_html/bitrix/templates/bitrix24/header.php(276): include
+OTUS -  #14 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog_after.php(88): include_once
+OTUS -  #15 /home/c/cg96022/Manage_Sites/public_html/bitrix/modules/main/include/prolog.php(11): require
+OTUS -  #16 /home/c/cg96022/Manage_Sites/public_html/bitrix/header.php(1): require_once
+OTUS -  #17 /home/c/cg96022/Manage_Sites/public_html/otus/currencies.php(6): require

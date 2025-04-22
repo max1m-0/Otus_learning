@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Установка Last Communication Tracker</title>
+    <script src="//api.bitrix24.com/api/v1/"></script>
+</head>
+<body>
+<div id="status">Установка…</div>
+<script>
+    BX24.init(async function () {
+          const status = document.getElementById("status");
+        try {
+            await new Promise((resolve, reject) => {
+                BX24.callMethod("crm.contact.userfield.add", {
+                    fields: {
+                        FIELD_NAME: "UF_LAST_COMM",
+                        USER_TYPE_ID: "datetime",
+                        XML_ID: "UF_LAST_COMM",
+                        EDIT_FORM_LABEL: {"ru":"Дата последней коммуникации"},
+                        LIST_COLUMN_LABEL: {"ru":"Последняя коммуникация"},
+                        SHOW_IN_LIST: "Y",
+                        IS_FILTERED: "Y"
+                    }
+                }, (res) => {
+                    if (res.error()) {
+                        status.innerHTML += "<br>Ошибка создания поля: " + res.error();
+                        reject(res.error());
+                    } else {
+                        status.innerHTML += "<br>Поле создано";
+                        resolve();
+                    }
+                });
+            });
+
+            const events = ["OnImMessageAdd","OnCallEnd"];
+            for (let ev of events) {
+                await new Promise((resolve, reject) => {
+                    BX24.callMethod("event.bind", {
+                        event: ev,
+                        handler: location.origin + "/app/communication-app/event.php"
+                    }, (res) => {
+                        if (res.error()) {
+                            status.innerHTML += `<br>Ошибка bind ${ev}: ${res.error()}`;
+                            reject(res.error());
+                        } else {
+                            status.innerHTML += `<br>${ev} зарегистрирован`;
+                            resolve();
+                        }
+                    });
+                });
+            }
+            status.innerHTML += "<br>Установка завершена";
+
+        } catch (err) {
+            status.innerHTML += "<br>Установка прервана: " + err;
+        }
+    });
+</script>
+</body>
+</html>
