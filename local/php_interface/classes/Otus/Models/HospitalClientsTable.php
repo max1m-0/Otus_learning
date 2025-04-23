@@ -2,6 +2,7 @@
 
 namespace Otus\Models;
 
+use Bitrix\Main\ArgumentTypeException;
 use Bitrix\Main\Localization\Loc,
     Bitrix\Main\ORM\Data\DataManager,
     Bitrix\Main\ORM\Fields\IntegerField,
@@ -11,6 +12,7 @@ use Bitrix\Main\Localization\Loc,
     Bitrix\Main\ORM\Fields\Relations\Reference,
     Bitrix\Main\ORM\Fields\Relations\OneToMany,
     Bitrix\Main\Entity\Query\Join;
+use Bitrix\Main\ORM\Fields\Validators\RangeValidator;
 
 /**
  * Class HospitalClientsTable
@@ -80,19 +82,19 @@ class HospitalClientsTable extends DataManager
     {
         return [
             new LengthValidator(3, 50),
-            new RegExpValidator("/^([а-яё]+|[a-z]+)$/i")
+            new RegExpValidator("/^([а-яё]+|[a-z]+)$/ui")
         ];
     }
 
     /**
      * Returns validators for age field.
-     *
      * @return array
+     * @throws ArgumentTypeException
      */
 
     public static function validateAge(){
         return [
-            new LengthValidator(18, null),
+            new RangeValidator(18, 100),
         ];
     }
 

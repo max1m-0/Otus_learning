@@ -15,5 +15,3 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')){
 if (file_exists(__DIR__ . '/classes/events.php')){
     require_once __DIR__ . '/classes/events.php';
 }
-
-//\Bitrix\Main\UI\Extension::load(['popup','crm.currency','timeman.custom']);

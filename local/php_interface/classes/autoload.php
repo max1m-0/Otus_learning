@@ -17,4 +17,3 @@ spl_autoload_register(function (string $class): void
         require_once $path;
     }
 });
-require "Otus/Models/Lists/HealersPropertyValuesTable.php";

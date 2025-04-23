@@ -4,7 +4,7 @@ namespace Otus\Logger;
 use \Bitrix\Main\Diag\FileExceptionHandlerLog;
 class OtusExceptionHandler extends FileExceptionHandlerLog
 {
-    public function write($exception, $logType)
+    public function write($exception, $logType = 1)
     {
         $logMessage = "OTUS - Exception: " . $exception->getMessage() . PHP_EOL;
         $logMessage .= "OTUS - File: " . $exception->getFile() . " Line: " . $exception->getLine() . PHP_EOL;
