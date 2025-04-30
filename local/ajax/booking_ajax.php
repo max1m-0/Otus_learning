@@ -16,27 +16,34 @@ if (!$fullName || !$reservationTime || !$procedureId) {
     echo json_encode(["status" => "error", "message" => "Заполните все поля"]);
     die();
 }
-$reservationTime=date("d.m.Y H:i:s",strtotime($reservationTime));
+
+$timestamp = strtotime($reservationTime);
+
+$timeFrom = date("Y-m-d H:i:s", $timestamp - 15 * 60);
+$timeTo = date("Y-m-d H:i:s", $timestamp + 15 * 60);
+
 $iblockId = 74;
 $filter = [
     "IBLOCK_ID" => $iblockId,
-    "PROPERTY_VALUES" => [
-        "RESERVATION_TIME" => $reservationTime,
-        "PROCEDURE_ID" => $procedureId,
-    ],
     "ACTIVE" => "Y",
+    ">=PROPERTY_RESERVATION_TIME" => $timeFrom,
+    "<=PROPERTY_RESERVATION_TIME" => $timeTo,
+    "PROPERTY_PROCEDURE_ID" => $procedureId,
 ];
-$reservationExists = \CIBlockElement::GetList(
+
+$reservationExists = CIBlockElement::GetList(
     [],
     $filter,
     false,
     false,
     ["ID"]
 )->Fetch();
+
 if ($reservationExists) {
-    echo json_encode(["status" => "error", "message" => "На это время и процедуру уже существует бронь"]);
+    echo json_encode(["status" => "error", "message" => "На это время и процедуру уже существует бронь в пределах 15 минут"]);
     die();
 }
+
 $el = new CIBlockElement;
 $fields = [
     "IBLOCK_ID" => $iblockId,
@@ -44,7 +51,7 @@ $fields = [
     "ACTIVE" => "Y",
     "PROPERTY_VALUES" => [
         "FULL_NAME" => $fullName,
-        "RESERVATION_TIME" => $reservationTime,
+        "RESERVATION_TIME" => date("d.m.Y H:i:s", $timestamp),
         "PROCEDURE_ID" => $procedureId,
     ]
 ];
