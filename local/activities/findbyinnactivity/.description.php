@@ -16,7 +16,7 @@ $arActivityDescription = [
 		'ID' => 'other',
 	],
 	'RETURN' => [
-		'COMPANY_NAME' => [
+		'COMPANY_ID' => [
 			'NAME' => Loc::getMessage('BPAA_COMP_ID'),
 			'TYPE' => 'int',
 		],
