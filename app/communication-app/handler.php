@@ -1,43 +1,33 @@
 <?php
 require_once (__DIR__.'/crest.php');
 
-
 if (!empty($_REQUEST['event']) && !empty($_REQUEST['data'])) {
     $event = $_REQUEST['event'];
     $data = $_REQUEST['data'];
+    file_put_contents( 'handler_errors.txt', var_export([$data,$event], true), FILE_APPEND);
 
-    if ($event === 'ONBEFOREMESSAGESADD') {
-        if (!empty($data['USER_ID'])) {
-            $contactId = findContactByUserId($data['FROM_USER_ID']);
-            if ($contactId) {
-                updateContactField($contactId, "Новое сообщение в чате");
+    if ($event === 'ONCRMACTIVITYADD') {
+        $activityId = $data['FIELDS']['ID'];
+
+        $activity = CRest::call('crm.activity.get', ['id' => $activityId]);
+
+        if ($activity && isset($activity['result'])) {
+
+            $activity = $activity['result'];
+
+            if ($activity['OWNER_TYPE_ID'] == 3) {
+                $type = $activity['PROVIDER_TYPE_ID'];
+
+                if (in_array($type, ['CALL', 'IM', 'OPENLINE'])) {
+                    $contactId = $activity['OWNER_ID'];
+                    updateContactField($contactId, date('c'));
+                }
             }
-        }
-    } elseif ($event === 'ONCALLEND') {
-        if (!empty($data['CALL_ID']) && !empty($data['PORTAL_USER_ID'])) {
-            $contactId = findContactByUserId($data['PORTAL_USER_ID']);
-            if ($contactId) {
-                updateContactField($contactId, "Звонок завершён");
-            }
+
         }
     }
 }
 
-function findContactByUserId($userId) {
-    $result = CRest::call(
-        'crm.contact.list',
-        [
-            'filter' => ['ASSIGNED_BY_ID' => $userId],
-            'select' => ['ID']
-        ]
-    );
-
-    if (!empty($result['result'][0]['ID'])) {
-        return $result['result'][0]['ID'];
-    }
-
-    return false;
-}
 
 function updateContactField($contactId, $value) {
     $updateResult = CRest::call(
